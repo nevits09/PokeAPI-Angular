@@ -1,0 +1,304 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo {
+    max-width: 9.2rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--electric-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3) {
+    --pill-accent: var(--french-violet);
+  }
+
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5),
+  .pill-group .pill:nth-child(6n + 6) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+
+<main class="poke-container">
+  <header class="header">
+    <div class="brand-mark" aria-hidden="true">P</div>
+    <p class="eyebrow">Explora el mundo Pokémon</p>
+    <h1>Pokédex</h1>
+    <p class="subtitle">Descubre detalles, tipos y estadísticas de tus Pokémon favoritos.</p>
+    <label class="search-box">
+      <span class="sr-only">Buscar Pokémon por nombre o número</span>
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input
+        type="search"
+        placeholder="Buscar por nombre o ID..."
+        [ngModel]="searchTerm()"
+        (ngModelChange)="searchTerm.set($event)"
+      />
+      <span class="search-hint">{{ filteredPokemons().length }} Pokémon</span>
+    </label>
+  </header>
+
+  @if (isLoading()) {
+    <section class="loading" aria-live="polite">
+      <div class="pokeball-loader" aria-hidden="true"></div>
+      <p>Conectando con la Pokédex...</p>
+      <span>Estamos buscando Pokémon para ti</span>
+    </section>
+  } @else if (errorMessage()) {
+    <section class="empty-state" role="alert">
+      <span class="empty-icon" aria-hidden="true">!</span>
+      <h2>Algo salió mal</h2>
+      <p>{{ errorMessage() }}</p>
+      <button class="retry-button" (click)="loadPokemons()">Intentar de nuevo</button>
+    </section>
+  } @else if (filteredPokemons().length === 0) {
+    <section class="empty-state">
+      <span class="empty-icon" aria-hidden="true">?</span>
+      <h2>No encontramos ese Pokémon</h2>
+      <p>Prueba con otro nombre o número de Pokédex.</p>
+    </section>
+  } @else {
+    <section class="pokemon-grid" aria-label="Lista de Pokémon">
+      @for (pokemon of filteredPokemons(); track pokemon.id) {
+        <button
+          class="card"
+          [class]="'card type-' + pokemon.types[0].type.name"
+          type="button"
+          (click)="openModal(pokemon)"
+          [attr.aria-label]="'Ver detalles de ' + pokemon.name"
+        >
+          <span class="card-id">#{{ pokemon.id.toString().padStart(3, '0') }}</span>
+          <span class="card-orb" aria-hidden="true"></span>
+          @if (pokemon.sprites.other['official-artwork'].front_default; as artwork) {
+            <img [src]="artwork" [alt]="pokemon.name" loading="lazy" />
+          } @else {
+            <span class="image-fallback" aria-hidden="true">{{ pokemon.name.charAt(0).toUpperCase() }}</span>
+          }
+          <span class="card-name">{{ pokemon.name | titlecase }}</span>
+          <span class="types">
+            @for (entry of pokemon.types; track entry.slot) {
+              <span class="badge" [class]="'badge type-' + entry.type.name">{{ entry.type.name }}</span>
+            }
+          </span>
+          <span class="card-cta">Ver perfil <span aria-hidden="true">↗</span></span>
+        </button>
+      }
+    </section>
+  }
+
+  <footer class="footer">
+    <span class="footer-dot"></span>
+    Datos obtenidos de la PokéAPI
+  </footer>
+
+  @if (selectedPokemon(); as pokemon) {
+    <div class="modal-backdrop" (click)="closeModal()" (keydown.escape)="closeModal()">
+      <section
+        class="modal-content"
+        role="dialog"
+        aria-modal="true"
+        [attr.aria-label]="'Detalles de ' + pokemon.name"
+        (click)="$event.stopPropagation()"
+      >
+        <button class="close-btn" type="button" aria-label="Cerrar detalles" (click)="closeModal()">×</button>
+        <div class="modal-header" [class]="'modal-header type-' + pokemon.types[0].type.name">
+          <span class="modal-number">N.º {{ pokemon.id.toString().padStart(3, '0') }}</span>
+          @if (pokemon.sprites.other['official-artwork'].front_default; as artwork) {
+            <img [src]="artwork" [alt]="pokemon.name" />
+          } @else {
+            <span class="modal-image-fallback" aria-hidden="true">{{ pokemon.name.charAt(0).toUpperCase() }}</span>
+          }
+          <h2>{{ pokemon.name | titlecase }}</h2>
+          <div class="types modal-types">
+            @for (entry of pokemon.types; track entry.slot) {
+              <span class="badge" [class]="'badge type-' + entry.type.name">{{ entry.type.name }}</span>
+            }
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="physical-info">
+            <div><span>Altura</span><strong>{{ pokemon.height / 10 }} <small>m</small></strong></div>
+            <div><span>Peso</span><strong>{{ pokemon.weight / 10 }} <small>kg</small></strong></div>
+          </div>
+          <div class="section-heading"><h3>Estadísticas base</h3><span>BASE STATS</span></div>
+          <div class="stats-list">
+            @for (stat of pokemon.stats; track stat.stat.name) {
+              <div class="stat-row">
+                <span class="stat-name">{{ stat.stat.name | uppercase }}</span>
+                <div class="progress-bar" role="progressbar" [attr.aria-label]="stat.stat.name" [attr.aria-valuenow]="stat.base_stat" aria-valuemin="0" aria-valuemax="200">
+                  <div class="progress-fill" [style.width.%]="Math.min((stat.base_stat / 200) * 100, 100)"></div>
+                </div>
+                <span class="stat-val">{{ stat.base_stat }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      </section>
+    </div>
+  }
+</main>
+
+
